@@ -1,0 +1,67 @@
+@use "../helpers" as *;
+
+:root {
+  // Colors
+  --color-natural-black: #0C0C0C;
+  --color-natural-white: #FFFFFF;
+
+  --color-primary: #0C68F4;
+  --color-secondary: #F45E0C;
+
+  --color-gray-10: #F9F9F9;
+  --color-gray-20: #F6F6F6;
+  --color-gray-30: #EDEDED;
+  --color-gray-40: #CBCBCB;
+  --color-gray-50: #B4B4B4;
+  --color-gray-60: #9E9E9E;
+  --color-gray-70: #717171;
+  --color-gray-80: #505050;
+  --color-gray-90: #444444;
+  --color-gray-99: #2D2D2D;
+
+  --color-primary-25: #E4EEFE;
+  --color-primary-50: #AECDFB;
+  --color-primary-75: #78ABF9;
+  --color-primary-100: #428AF6;
+  --color-primary-200: #2779F5;
+  --color-primary-400: #0951BE;
+  --color-primary-500: #063A88;
+  --color-primary-600: #052E6D;
+  --color-primary-700: #042352;
+  --color-primary-900: #021736;
+
+  --color-secondary-100: #FDDBC9;
+  --color-secondary-200: #FAB793;
+  --color-secondary-300: #F68242;
+  --color-secondary-400: #F45E0C;
+  --color-secondary-500: #BE4909;
+  --color-secondary-600: #883406;
+
+  --color-status-error: #C91433;
+  --color-status-error-light: #FAE7EB;
+  --color-status-success: #198754;
+  --color-status-success-light: #D1F7E5;
+
+  // Font
+  --font-family-basic: "Inter", sans-serif;
+
+  // Padding
+  --padding-4: #{rem(4)};
+  --padding-8: #{rem(8)};
+  --padding-12: #{rem(12)};
+  --padding-16: #{rem(16)};
+  --padding-20: #{rem(20)};
+  --padding-24: #{rem(24)};
+  --padding-32: #{rem(32)};
+
+  // Border Radius
+  --radius-4: #{rem(4)};
+  --radius-8: #{rem(8)};
+
+  --container-width: #{rem(1600)};
+  --container-padding-x: #{rem(16)};
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}
