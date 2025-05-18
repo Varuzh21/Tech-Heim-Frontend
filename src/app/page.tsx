@@ -1,9 +1,10 @@
+import { Header } from "@/components/ui";
 
 const Home = () => {
   return (
-      <div>
-
-      </div>
+      <>
+          <Header />
+      </>
   )
 }
 

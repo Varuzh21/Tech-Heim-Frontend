@@ -1,0 +1,8 @@
+@use "../helpers" as *;
+
+.dropdown{
+  position: absolute;
+  z-index: 2;
+  top: rem(105);
+  background-color: var(--color-natural-white);
+}

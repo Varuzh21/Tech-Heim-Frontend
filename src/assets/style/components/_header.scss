@@ -1,0 +1,121 @@
+@use "../helpers" as *;
+
+.header {
+  position: relative;
+  width: 100%;
+  background-color: var(--color-natural-white);
+
+  &__body {
+    padding-block: rem(19);
+
+    &-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    width: fluid(56, 42);
+  }
+
+  &__menu {
+
+    &-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: rem(48);
+    }
+
+    &-link {
+      position: relative;
+      font-size: rem(18);
+      color: var(--color-natural-black);
+      transition: color 0.3s ease;
+
+      @include tablet{
+        font-size: rem(16);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -0.25rem;
+        width: 100%;
+        height: rem(2);
+        border-radius: 1px;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+      }
+
+      &.is-active {
+        color: var(--color-primary);
+        pointer-events: none;
+
+        &::after {
+          background-color: var(--color-primary);
+          transform: scaleX(1);
+        }
+      }
+
+      &:hover {
+        &::after {
+          background: var(--hover-color);
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    &-item{
+      &:hover,
+      &:focus-within {
+        .dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__overlay {
+    @include mobile-above {
+      display: contents;
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: rem(8);
+    }
+
+  }
+
+  &__button {
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  &__auth-link {
+    column-gap: rem(4);
+
+    & > a {
+      text-decoration: none;
+      color: var(--color-natural-white);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: rem(1);
+    width: 100%;
+    background: var(--border-bottom);
+  }
+
+}

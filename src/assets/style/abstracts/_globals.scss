@@ -5,7 +5,7 @@ body {
   font-family: var(--font-family-basic);
   font-weight: 300;
   letter-spacing: -0.03em;
-  @include fluid-text(64, 12);
+  @include fluid-text(18, 12);
   display: flex;
   flex-direction: column;
   line-height: normal;
@@ -44,4 +44,29 @@ h5, .h5 {
 
 h6, .h6{
   @include fluid-text(16, 14);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-primary);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(40));
+
+      content: '';
+    }
+  }
 }

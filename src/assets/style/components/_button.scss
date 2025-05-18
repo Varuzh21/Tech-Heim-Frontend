@@ -1,0 +1,13 @@
+@use "../helpers" as *;
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  color: var(--color-natural-white);
+  font-size: rem(18);
+  padding: rem(8) rem(16);
+  white-space: nowrap;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-8);
+  border: none;
+}

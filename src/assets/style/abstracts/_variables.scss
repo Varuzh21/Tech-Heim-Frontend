@@ -64,4 +64,7 @@
   @include laptop {
     --container-width: #{rem(1280)};
   }
+
+  --border-bottom: linear-gradient(90.00deg, #0c68f44d -0.125%, #0c68f4b3 53.568%,#0c68f44d 98.475%);
+  --hover-color: linear-gradient(90.00deg, #0c68f44d -0.125%, #0c68f4b3 53.568%,#0c68f44d 98.475%);
 }
